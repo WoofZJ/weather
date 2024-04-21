@@ -1,0 +1,5 @@
+output/
+src/__pycache__/
+log/
+.venv/
+config/key.txt
