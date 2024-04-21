@@ -1,0 +1,1 @@
+Fill your key in config/key.txt.
