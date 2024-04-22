@@ -15,12 +15,18 @@ if [ ! -d "$venvDir" ]; then
     echo "Created python virtual environment at $venvDir."
 fi
 
-source "$venvDir/Scripts/activate"
+source "$venvDir/bin/activate"
 echo "Using python in $venvDir."
 
 echo "Installing dependencies using pip..."
 pip install -r requirements.txt
 echo "Finished installing."
+
+ignore_signal() {
+  :
+}
+
+trap ignore_signal SIGINT
 
 echo "Running main.py..."
 echo "-------------------------------"
